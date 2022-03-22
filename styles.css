@@ -2,13 +2,18 @@
 /* Cater & Roboto fonts */
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto:wght@400;500;700&display=swap');
 
-/**/
+/*{ Variables */
+:root {
+    --black: #000;
+    --yellow: yellow;
+    --black-shadow: 0 4px 8px 0 black;
+}
 
 
 /* Default styles */
 
 body {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -16,7 +21,7 @@ img {
 }
 
 .title {
-    color: black;
+    color: var(--black);
     font-size: 1.75rem;
 }
 
@@ -34,7 +39,7 @@ img {
 .home::after {
     position: absolute;
     content: "";
-    background: black;
+    background: var(--black);
     height: 100%;
     width: 100%;
     top: 0;
@@ -51,12 +56,12 @@ img {
 }
 
 .home-name h1 {
-    color: yellow;
+    color: var(--yellow);
     font-size: 2.5em;
 }
 
 .home-img img{
-    box-shadow: 0px 4px 35px black;
+    box-shadow: var(--black-shadow);
     border-radius: 50%;
     height: 250px;
     width: 250px;
@@ -65,13 +70,52 @@ img {
 }
 /*......................................................................*/
 /* City section styles */
+.coins {
+    color: var(--yellow);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.city-content {
+    box-shadow: var(--black-shadow);
+}
+
 .city h2 {
     font-size: 1.1em;
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.city img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.city-content i {
+    color: var(--yellow);
+    background: gray;
+    padding: 4px;
+}
+
+.city p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+.pb-80 {
+    padding-bottom: 80px;
+}
 /*......................................................................*/
 /* Language section styles */
+.language p {
+    margin-top: 0;
+    line-height: 1.75;
+}
+
+.language span, .language i {
+    color: red;
+    font-weight: bold;
+}
+
 .table  {
     width: 100%;
     border-collapse: collapse;
@@ -94,6 +138,9 @@ tr:nth-child(even) {
 
 /*..................................................................*/
 /* Historical section styles */
+.historical {
+    border-bottom: #000 dotted 1px ;
+}
 
 .historical h2 {
     font-size: 1em;
@@ -120,7 +167,7 @@ tr:nth-child(even) {
  }
 
 .box {
-     box-shadow: 0 4px 8px 0 black;
+     box-shadow: var(--black-shadow);
      border-radius: 2px;
  }
 
@@ -179,7 +226,7 @@ tr:nth-child(even) {
     }
 
     td:nth-child(even) {
-        background: #000;
+        background: var(--black);
         color: #fff;
     }
 
@@ -189,10 +236,8 @@ tr:nth-child(even) {
     }
 }
 
-
-
 /*......................................................................................*/
-/* Flex styling that will allow me to align elements inside the the simpleGrid styling */
+/* Default Flex styling that will allow me to align elements inside the simpleGrid row and colomns */
 .flex {
     display: flex;
 }
