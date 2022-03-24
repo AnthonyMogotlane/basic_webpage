@@ -188,22 +188,31 @@ tr:nth-child(even) {
     .flex {
         flex-direction: column;
     }
-
+    
     /*..................................................................*/
     /* Historical section styles Tablets and Mobile*/
     .historical .box-2 img {
         float: left;
-     }
+    }
 }
 
 /*......................................................................*/
 /* Mobile screens */
 @media screen and (max-width: 500px) {
+    .home-content {
+        min-height: 60vh;
+        max-height: 100vh;
+    }
     /*......................................................................*/
     /* Language section styles */
     table {
         border: none;
     }
+
+    th, td {
+        border: solid #444 1px;
+    }
+
     thead {
         display: none;
     }
@@ -213,7 +222,6 @@ tr:nth-child(even) {
     }
 
     td {
-        /* text-align: right; */
         padding-left: 50%;
         position: relative;
     }
@@ -224,15 +232,21 @@ tr:nth-child(even) {
         left: 0;
         padding-left: 15px;
     }
-
+    
     td:nth-child(even) {
-        background: var(--black);
+        background: #444;
         color: #fff;
     }
 
     tr {
         margin-bottom: 10px;
-        
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    /*...............................................................................*/
+    .box {
+        height: 36em;
     }
 }
 
@@ -266,4 +280,4 @@ tr:nth-child(even) {
     align-self: end;
 }
 
-/*.................................................................................*/
+/*................................................................................................*/
