@@ -13,7 +13,13 @@
 /* Default styles */
 
 body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+    color: yellow;
 }
 
 img {
@@ -25,6 +31,24 @@ img {
     font-size: 1.75rem;
 }
 
+/*..................................................................*/
+/* Nav bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 31000;
+    background: black;
+    box-shadow: var(--black-shadow);
+    font-size: 2em;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 10em;
+}
 /*..................................................................*/
 /* Intro section styles */
 .home {
