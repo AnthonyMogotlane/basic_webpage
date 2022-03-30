@@ -17,9 +17,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 li {
     list-style: none;
-    color: yellow;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
@@ -33,22 +40,39 @@ img {
 
 /*..................................................................*/
 /* Nav bar */
-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 31000;
-    background: black;
-    box-shadow: var(--black-shadow);
-    font-size: 2em;
+    height: 8vh;
+    z-index: 111;
+}
+
+.logo {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #000;
+    height: 8vh;
+    font-size: 20px;
 }
 
 .nav-list {
     display: flex;
-    justify-content: center;
-    column-gap: 10em;
+    column-gap: 20px;
 }
+
+.menu-btn {
+    display: none;
+}
+
+
+
 /*..................................................................*/
 /* Intro section styles */
 .home {
@@ -199,9 +223,52 @@ tr:nth-child(even) {
      border-radius: 2px;
  }
 
+ .scroll-up {
+     position: fixed;
+     right: 20px;
+     bottom: 20px;
+
+ }
+
+ .scroll-up > i{
+     font-size: 2em;
+     cursor: pointer;
+ }
+
 /*......................................................................*/
 /* Tables and Mobile screens */
 @media screen and (max-width: 760px) {
+    /*......................................................................*/
+    /* Menu button */
+    .body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 4vh;
+        right: 0;
+        height: 92vh;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: green;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+    }
+
+    .nav-show {
+        transform: translateX(0%);
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .menu-btn {
+        display: block;
+    }
     /*Intro section styles */
     .home-name {
         max-width: 300px;

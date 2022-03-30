@@ -16,20 +16,22 @@
 
 <body>
     <!-- nav bar -->
-    <header>
-        <div class="nav">
-            <div class="navbar">
-                <ul class="nav-list">
-                    <li class="nav-item">Home</li>
-                    <li class="nav-item">City</li>
-                    <li class="nav-item">Language</li>
-                    <li class="nav-item">Historical</li>
-                </ul>
+    <section class="header">
+        <nav>
+            <div class="logo"><h4>AM</h4></div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#city">City</a></li>
+                <li class="nav-item"><a href="#language">Language</a></li>
+                <li class="nav-item"><a href="#historical">Historical</a></li>
+            </ul>
+            <div class="menu-btn">
+                <a href=""><i class="fas fa-bars"></i></a>
             </div>
-        </div>
-    </header>
+        </nav>
+    </section>
     <!-- Intro section -->
-    <section class="home">
+    <section class="home" id="home">
         <div class="container">
             <div class="row home-content center flex align-center">
                 <div class="col-6 home-name">
@@ -43,7 +45,7 @@
     </section>
 
     <!-- City section -->
-    <section class="city pb-80">
+    <section class="city pb-80" id="city">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -75,7 +77,7 @@
     </section>
     <hr style="border: dotted yellow .5px">
     <!-- Language section -->
-    <section class="language pb-80">
+    <section class="language pb-80" id="language">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -121,7 +123,7 @@
             </div>
         </div>
     </section>
-    <hr style="border: dotted red 1px;">
+    <hr style="border: dotted red 1px;" id="historical">
 
     <!-- Historical section -->
     <section class="historical pb-80">
@@ -190,6 +192,10 @@
             </div>
         </div>
     </section>
+    <div class="scroll-up">
+        <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
