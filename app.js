@@ -15,13 +15,14 @@ scrollBtn.addEventListener("click", () => {
 
 menuBtn.addEventListener("click", () => {
   navList.classList.toggle("nav-show");
-  menuBtn.style.display = "none";
-  menuClose.style.display = "block"
+  if(menuBtn.classList.contains("nav-show")) {
+
+    menuBtn.innerHTML = `<i class="fas fa-window-close"></i>`;
+  }
 })
 
 navItem[0].addEventListener("click", () => {
   navList.classList.remove("nav-show");
-  menuClose.classList.toggle("nav-hide")
 })
 navItem[1].addEventListener("click", () => {
   navList.classList.remove("nav-show");
@@ -34,9 +35,8 @@ navItem[3].addEventListener("click", () => {
 })
 
 menuClose.addEventListener("click", () => {
-  menuBtn.style.display = "block";
-  menuClose.style.display = "none";
   navList.classList.remove("nav-show");
+  menuBtn.innerHTML = `hello`;
 })
 
 
